@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest House Paradise</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5em;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+            padding: 0.5em;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        .hero {
+            text-align: center;
+            margin: 2em 0;
+            position: relative;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 2em;
+            background-color: #f4f4f4;
+        }
+
+        .feature {
+            text-align: center;
+            margin-bottom   : 15px;
+            padding: 1.5em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            max-width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .room-types {
+            text-align: center;
+            margin: 2em 0;
+            background-color: #e6f7ff;
+            padding: 2em;
+            border-radius: 8px;
+        }
+
+        .room-types img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        .reservation {
+            text-align: center;
+            margin: 2em 0;
+            background-color: #d9f7be;
+            padding: 2em;
+            border-radius: 8px;
+        }
+
+        .reservation form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 1em;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .reservation label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        .reservation input, .reservation select {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .reservation button {
+            background-color: #333;
+            color: white;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .reservation button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+            <div>
+                <h1>Guest House Paradise</h1>
+                <p>Your home away from home</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Rooms</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section class="hero">
+        <img src="guesthouse.jpg" alt="Guest House Exterior">
+        <div class="hero-overlay">
+            <h2>Welcome to Guest House Paradise</h2>
+            <p>Experience comfort and luxury in a serene environment.</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Comfortable Rooms</h3>
+            <p>Relax in our spacious and well-furnished rooms.</p>
+        </div>
+        <div class="feature">
+            <h3>Exceptional Service</h3>
+            <p>Our dedicated staff is committed to making your stay memorable.</p>
+        </div>
+        <div class="feature">
+            <h3>Scenic Location</h3>
+            <p>Enjoy beautiful views of the surrounding landscape.</p>
+        </div>
+    </section>
+
+    <section class="room-types">
+        <h2>Our Room Types</h2>
+        <div>
+            <img src="single-room.jpg" alt="Single Room">
+            <h3>Single Room</h3>
+            <p>Perfect for solo travelers or a cozy retreat.</p>
+        </div>
+        <div>
+            <img src="double-room.jpg" alt="Double Room">
+            <h3>Double Room</h3>
+            <p>Spacious and comfortable for couples or small groups.</p>
+        </div>
+        <div>
+            <img src="suite.jpg" alt="Suite">
+            <h3>Suite</h3>
+            <p>Luxurious accommodation with extra amenities.</p>
+        </div>
+        <div>
+            <img src="family-room.jpg" alt="Family Room">
+            <h3>Family Room</h3>
+            <p>Ideal for families with extra space and amenities.</p>
+        </div>
+        <div>
+            <img src="full-house.jpg" alt="Full House">
+            <h3>Full House</h3>
+            <p>Enjoy the entire house for a private and exclusive stay.</p>
+        </div>
+        <div>
+            <img src="shared-room.jpg" alt="Shared Room">
+            <h3>Shared Room</h3>
+            <p>Shared accommodation for a budget-friendly stay.</p>
+        </div>
+    </section>
+
+    <section class="reservation">
+        <h2>Book Your Stay</h2>
+        <p>Plan your getaway and reserve a room today.</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="room-type">Room Type:</label>
+            <select id="room-type" name="room-type" required>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+                <option value="family">Family Room</option>
+                <option value="full-house">Full House</option>
+                <option value="shared">Shared Room</option>
+            </select>
+
+            <label for="check-in">Check-in Date:</label>
+            <input type="date" id="check-in" name="check-in" required>
+
+            <label for="check-out">Check-out Date:</label>
+            <input type="date" id="check-out" name="check-out" required>
+
+            <button type="submit">Reserve Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Guest House Paradise. All rights reserved.</p>
+    </footer>
+</body>
+</html>
